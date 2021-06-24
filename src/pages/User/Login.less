@@ -1,0 +1,45 @@
+@loginMainColor: #1086ee;
+.absolute-v-center {
+  position: absolute;
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+}
+
+.login {
+  height: 100%;
+  min-width: 900px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  .loginCardPosition:extend(.absolute-v-center) {
+
+  }
+  :global {
+    .ant-input {
+      border-style: none none solid;
+      background: none;
+      border-bottom-color: @loginMainColor;
+    }
+    .ant-btn-primary {
+      background-color: @loginMainColor;
+      border: none;
+    }
+  }
+}
+
+.loginTitle {
+  color: @loginMainColor;
+  font-size: 20px;
+}
+
+.sideBannerPosition:extend(.absolute-v-center) {
+  left: 0;
+}
+
+.sideBanner {
+  width: 440px;
+  text-align: center;
+  background: rgba(0, 33, 64, 0.7);
+  color: #fff;
+  padding: 30px 0;
+}
